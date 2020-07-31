@@ -1,24 +1,24 @@
-#lxd-openwrt
-#===========
+lxd-openwrt
+===========
 
-##Scripts for building LXD images from OpenWrt rootfs tarballs. The OpenWrt SDK is used to build a patched procd package.
+## Scripts for building LXD images from OpenWrt rootfs tarballs. The OpenWrt SDK is used to build a patched procd package.
 
-###Requirements
-###------------
+Requirements
+------------
 It's recommended you use Debian or Ubuntu on the build system. The following additional packages are required on Ubuntu 18.04:
 
 * fakeroot
 
-###Configuration
-###-------------
+Configuration
+-------------
 Refer to the top of build.sh.
 
-###Usage
-###-----
+Usage
+-----
 ./build.sh [-a|--arch x86_64|i686|aarch64] [-v|--version <version>] [-p|--packages <packages>] [-f|--files] [-t|--type lxd|plain] [-s|--super fakeroot|sudo] [--help]
 
-###Example
-###-------
+Example
+-------
 ./build.sh
 lxc image import bin/openwrt-*-lxd.tar.gz --alias openwrt
 lxc launch openwrt router
